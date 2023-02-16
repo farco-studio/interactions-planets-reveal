@@ -17,10 +17,10 @@ const staggerInItems = () => {
 };
 
 const titleIntro = () => {
-  gsap.from(titleSpan, {
+  gsap.to(titleSpan, {
     duration: 2,
-    y: 100,
-    opacity: 0,
+    y: 0,
+    opacity: 1,
     ease: CustomEase.create("custom", "M0,0 C0.96,-0.01 0.15,1 1,1 "),
   });
 };

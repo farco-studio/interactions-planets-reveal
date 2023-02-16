@@ -89,7 +89,6 @@ ul {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 
@@ -105,11 +104,15 @@ ul {
   margin-top: 40px;
   overflow: hidden;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 12.5vh;
+  line-height: 1;
 }
 
 .title span {
   display: block;
+  transform: translateY(100px);
+  opacity: 0;
+  line-height: 1;
 }
 
 li {
@@ -143,8 +146,8 @@ li:last-child {
 }
 
 .cursor {
-  width: 84px;
-  height: 84px;
+  width: 10vw;
+  height: 10vw;
   position: fixed;
   z-index: 1;
   border-radius: 96px;
