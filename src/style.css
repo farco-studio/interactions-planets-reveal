@@ -1,0 +1,208 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-tertiary: #D6C5F8;
+  --title-l: 10vw;
+  --bodycopy: 5vw;
+  --bg: #F5BF49;
+  --font-base: "Inter", sans-serif;
+  --font-display: "Oswald", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --title-l: 60px;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secondary);
+}
+
+.header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  position: relative;
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+}
+
+.header a::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  right: 100%;
+  background: var(--color-primary);
+  position: absolute;
+  transition: right 0.3s ease;
+}
+
+.header a:hover::after {
+  right: 24px;
+}
+
+.header svg path {
+  stroke: var(--color-primary);
+}
+
+img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.planets-reveal {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  font-size: var(--bodycopy);
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
+.title {
+  color: var(--color-tertiary);
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: var(--title-l);
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 90%;
+  margin-top: 40px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.title span {
+  display: block;
+}
+
+li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: var(--bodycopy);
+  color: var(--color-tertiary);
+  cursor: pointer;
+  height: 20vh;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+li img {
+  width: 120px;
+  height: 120px;
+  padding: 18px 0;
+  object-fit: contain;
+  object-position: 100% 50%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.cursor {
+  width: 84px;
+  height: 84px;
+  position: fixed;
+  z-index: 1;
+  border-radius: 96px;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+  text-transform: uppercase;
+  color: var(--color-negative);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+  font-weight: 600;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
+
+.hover-img {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 12vh;
+  bottom: 0;
+  left: 0;
+  right: 0;    
+  transform: scale(0.65);
+}
+
+.planets-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-secondary);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.planets-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+}
