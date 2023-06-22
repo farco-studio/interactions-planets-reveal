@@ -5,7 +5,7 @@
 
 Free, refined interactions to inspire our community and make the web a more beautiful place.
 
-[Demo](https://interactions-planets-reveal.onrender.com/)
+[Demo](https://interactions-planets.onrender.com/)
 
 
 ## Installation
